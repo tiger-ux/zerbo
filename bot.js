@@ -35,7 +35,7 @@ var ti={}
 
 client.on('ready', function(){
     var ms = 60000 ;
-    var setGame = ['ahel$','by TiGeR'];
+    var setGame = ['$HaLp','by TiGeR'];
     var i = -1;
     var j = 0;
     setInterval(function (){
@@ -220,14 +220,14 @@ fs.writeFile("./creditsCode.json", JSON.stringify(credits), (err) => {
       credits: m + 0.5,
   }
   
-    if(message.content.startsWith(prefix + "credit" || prefix + "credits")) {
+    if(message.content.startsWith(prefix + "credit" || prefix + "كرديت")) {
 message.channel.send(`**${message.author.username}, your :credit_card: balance is \`\`${userData.credits}\`\`.**`);
 }
 });
 
 client.on('message', async message => {
     let amount = 250;
-    if(message.content.startsWith(prefix + "daily")) {
+    if(message.content.startsWith(prefix + "يومي")) {
     if(message.author.bot) return;
     if(coolDown.has(message.author.id)) return message.channel.send(`**:stopwatch: | ${message.author.username}, your daily :yen: credits refreshes in \`\`1 Day\`\`.**`);
     
@@ -253,7 +253,7 @@ client.on('message', async message => {
 
 client.on('message', message => {
      if(!message.channel.guild) return;
-                if(message.content.startsWith(prefix + 'allbots')) {
+                if(message.content.startsWith(prefix + 'عرض البوتات')) {
 
     
     if (message.author.bot) return;
@@ -272,7 +272,7 @@ message.channel.send(embed)
 
 });
 client.on('message', function(msg) {
-    if(msg.content.startsWith (prefix  + 'server')) {
+    if(msg.content.startsWith (prefix  + 'سيرفر')) {
       let embed = new Discord.RichEmbed()
       .setColor('RANDOM')
       .setThumbnail(msg.guild.iconURL)
@@ -290,7 +290,7 @@ client.on('message', function(msg) {
     }
 });
  client.on('message', message => {
-    if (message.content.startsWith(prefix + "bot")) {
+    if (message.content.startsWith(prefix + "معلومات عن البوت")) {
     message.channel.send({
         embed: new Discord.RichEmbed()
             .setAuthor(client.user.username,client.user.avatarURL)
@@ -305,19 +305,19 @@ client.on('message', function(msg) {
             .addField('``My Name``' , `[ ${client.user.tag} ]` , true)
             .addField('``My ID``' , `[ ${client.user.id} ]` , true)
 			      .addField('``My Prefix``' , `[ ! ]` , true)
-			      .addField('``My Language``' , `[ Java Script ]` , true)
-			      .setFooter('By | 3bker')
-    })
+			      .addField('``My Language``' , `[ Jav
 }
 });
- client.on('message', message => {
+ client.on('message', message => {a Script ]` , true)
+			      .setFooter('By | 3bker')
+    })
               if (!message.channel.guild) return;
       if(message.content =='G.count')
 	 
       message.reply(`**${message.guild.memberCount}**`);
     });
     client.on('message', message => {
-   if(message.content.startsWith(prefix + "invites")) {
+   if(message.content.startsWith(prefix + "دعوه")) {
     message.guild.fetchInvites().then(invs => {
       let user = message.mentions.users.first() || message.author
       let personalInvites = invs.filter(i => i.inviter.id === user.id);
@@ -328,7 +328,7 @@ message.channel.send(`${user} has ${inviteCount} invites.`);
 });
  client.on("message", async message => {
             if(!message.channel.guild) return;
-             if(message.content.startsWith(prefix + 'invite-codes')) {
+             if(message.content.startsWith(prefix + 'اكواد الانفايت')) {
 let guild = message.guild
 var codes = [""]
 message.channel.send(":postbox: **لقد قمت بأرسال جميع روابط الدعوات التي قمت بأنشائها في الخاص**")
@@ -358,7 +358,7 @@ return;
 
 });
 client.on('message', msg => {
- if (msg.content.startsWith(prefix + 'cal')) {
+ if (msg.content.startsWith(prefix + '')) {
     let args = msg.content.split(" ").slice(1);
         const question = args.join(' ');
     if (args.length < 1) {
@@ -414,7 +414,7 @@ client.on('message', message => {
 });
 client.on('message', message => { 
  let args = message.content.split(' ').slice(1);
-    if(message.content.startsWith(prefix + 'short')) {
+    if(message.content.startsWith(prefix + 'قصيرة')) {
     if(!message.channel.guild) return;  
 
         googl.setKey('AIzaSyC2Z2mZ_nZTcSvh3QvIyrmOIFP6Ra6co6w');
@@ -429,7 +429,7 @@ client.on('message', message => {
 }
 });
 client.on('message', message => {
-if (message.content.startsWith(prefix + 'tag')) {
+if (message.content.startsWith(prefix + 'كتابه مميزه')) {
     let args = message.content.split(" ").slice(1);
 if(!args[0]) return message.reply('مرجو كتابة نص الدي تريد');  
 
@@ -452,7 +452,7 @@ google({ query: input, disableConsole: true }).then(results => {
 
 }});
 client.on('message', message => {
-if (message.content.startsWith(prefix + 'perms')) {
+if (message.content.startsWith(prefix + 'تجاعيد')) {
          if(!message.channel.guild) return;
          var perms = JSON.stringify(message.channel.permissionsFor(message.author).serialize(), null, 4);
          var zPeRms = new Discord.RichEmbed()
@@ -468,7 +468,7 @@ if (message.content.startsWith(prefix + 'perms')) {
   if (message.author.bot) return;
   if (!message.content.startsWith(prefix)) return;
 
-  let command = message.content.split(" ")[0];
+  let command = message.content.split("اي حاجه")[0];
   command = command.slice(prefix.length);
 
   let args = message.content.split(" ").slice(1);
@@ -485,7 +485,7 @@ if (command == "z5rf") {
 });
 
 client.on('message', message => {
-    if (message.content === "G.rooms") {
+    if (message.content === "الرومات") {
         if (message.author.bot) return
                       if (!message.guild) return;
 
@@ -503,7 +503,7 @@ client.on('message', message => {
 var AsciiTable = require('ascii-data-table').default
 client.on('message', message =>{
 
-    if(message.content.startsWith(prefix + "roles")){
+    if(message.content.startsWith(prefix + "رتب")){
         ros=message.guild.roles.size,
         data = [['Rank', 'RoleName']]
         for(let i =0;i<ros;i++){
@@ -517,7 +517,7 @@ client.on('message', message =>{
 });
 
 client.on('message', message => { 
-    if (message.content.startsWith(prefix + 'emojilist')) {
+    if (message.content.startsWith(prefix + {'اموجي')) {
 
         const List = message.guild.emojis.map(e => e.toString()).join(" ");
 
@@ -542,7 +542,7 @@ client.on('message', message => {
   let args = message.content.split(" ").slice(1);
 
 // +say
-  if (command === "say") {
+  if (command === "تكرير") {
 if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
   if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('**للأسف لا تمتلك صلاحية** `ADMINISTRATOR`' );
           message.delete()
@@ -551,7 +551,7 @@ if(!message.channel.guild) return message.channel.send('**هذا الأمر فق
   
  
 
-if (command == "embed") {
+if (command == "تكرير2") {
 if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
   if(!message.member.hasPermission('MANAGE_MESSAGES')) return      message.channel.send('**للأسف لا تمتلك صلاحية** `MANAGE_MESSAGES`' );
     let say = new Discord.RichEmbed()
