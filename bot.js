@@ -35,7 +35,7 @@ var ti={}
 
 client.on('ready', function(){
     var ms = 60000 ;
-    var setGame = ['$HaLp','by TiGeR'];
+    var setGame = ['$help','by TiGeR'];
     var i = -1;
     var j = 0;
     setInterval(function (){
